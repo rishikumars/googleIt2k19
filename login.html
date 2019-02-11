@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kratos - Google iT</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="style/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="left g_assist">
+        <img src="images/google_assistant.jpg" />
+    </div>
+    <div class="layer">
+        <div class="row">
+
+            <div class="col s4 offset-s6">
+                <center>
+                    <h3>Google iT</h3>
+                </center>
+                <div class="card blue-grey white">
+                    <div class="card-content black-text">
+                        <span class="card-title">Sign up</span>
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12 name">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="user_name" type="text" class="validate">
+                                        <label for="user_name">Your Name</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">phone</i>
+                                        <input id="mobile_number" type="tel" class="validate">
+                                        <label for="mobile_number">Mobile Number</label>
+                                    </div>
+                                    <a id="myBtn" class="waves-effect waves-light btn login blue" onclick="writeUserData()">Login</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var input = document.getElementById("mobile_number");
+
+        input.addEventListener("keyup", function(event) {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                var mob = document.getElementById("mobile_number").value;
+                var name = document.getElementById("user_name").value;
+                // Number 13 is the "Enter" key on the keyboard
+                if (isNaN(mob)) {
+                    alert('Enter Number');
+                } else {
+                    if (event.keyCode === 13 && mob.length == 10 && name.length > 1) {
+                        // Trigger the button element with a click
+                        document.getElementById("myBtn").click();
+                    }
+                }
+            }
+
+        );
+    </script>
+    <script>
+        var input = document.getElementById("user_name");
+
+        input.addEventListener("keyup", function(event) {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            var mob = document.getElementById("mobile_number").value;
+            var name = document.getElementById("user_name").value;
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13 && mob.length == 10 && name.lenght > 1) {
+                // Trigger the button element with a click
+                document.getElementById("myBtn").click();
+            }
+        });
+    </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="script/firebase.js"></script>
+</body>
+
+</html>s

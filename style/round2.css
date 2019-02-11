@@ -1,0 +1,34 @@
+.hey {
+    height: 40px;
+    width: 120px;
+    margin: 40px -80px 20px 110px;
+    position: relative;
+    bottom: 10%;
+}
+
+.fontfam {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.row .col.s12 {
+    width: 58% !important;
+    margin-left: 280px !important;
+    margin-top: 30px !important;
+}
+
+.time {
+    font-family: 'Nova Flat';
+    font-size: 70px;
+    margin-top: 10%;
+}
+
+.partition {
+    width: 100%;
+    height: 50%;
+}
+.card-actions{
+    background-color:inherit;
+    border-top:none;
+    position:relative;
+    padding:16px 24px}
+}

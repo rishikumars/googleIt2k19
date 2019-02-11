@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        Round Two.
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.10.8/sass.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style/round2.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="hey" style="overflow: hidden; background-color:#000;">
+    <div id="questions">
+        <div v-if="!isRetrieved">
+	
+            <div class="row" style="margin-top: 10%">
+                <div class="col s4 offset-s4">
+                    <div class="card">
+                        <div class="card-content black-text">
+                            <span class="card-title">Please Wait.....</span>
+                            <p class="card-title left">Loading your questions....</p>
+                            <div class="preloader-wrapper small active right">
+                                <div class="spinner-layer spinner-green-only">
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div>
+                <img src="./images/lion1.png" style="width:75%;margin-top:-29.69%;margin-left:65%; " />
+            </div>
+        </div>
+        <div v-if="isRetrieved">
+            <center>
+                <div class="fontfam">
+                    <img src="./images/logo.png" style="height:200px;width:200px; margin-top:-3%;" />
+                </div>
+            </center>
+
+            <div class="row" style="margin-top: -6%">
+                <div class="col s12 offset-s2">
+                    <div class="card horizontal">
+                        <div class="card-image">
+                            <img class="materialboxed" width="500px" height="500px" :src=images[arr[i]].pic>
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content" style="margin-top : 10%">
+                                <p>Give your answer here.</p>
+                                <div class="input-field">
+                                    <input id="quest" type="text" class="validate" v-on:keyup.13="check()">
+                                    <label for="quest">{{images[arr[i]].quest}}</label>
+                                </div>
+                            </div>
+                            <div class="card-actions partition">
+
+                                <a class="waves-effect waves-light btn hey" v-on:click="check">Submit</a>
+
+                            </div>
+                            <div class="card-actions partition">
+                                <p>
+
+                                        <h3 class="time ">{{mins}}:{{secs}}</h3>
+
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div>
+                <img src="./images/lion1.png" style="width:75%;margin-top:-110%;margin-left:65%; " />
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js "></script>
+    <script src="script/round2.js "></script>
+</body>
+
+</html>

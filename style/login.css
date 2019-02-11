@@ -1,0 +1,28 @@
+.layer {
+    margin-top: 5%;
+    margin-left: -5%;
+}
+
+.g_assist {
+    margin-top: -5%;
+    margin-left: -10%;
+    height: 200px;
+    width: 200px;
+}
+
+.row .input-field input:focus {
+    border-bottom: 1px solid #2196f3 !important;
+    box-shadow: 0 1px 0 0 #2196f3 !important
+}
+
+.input-field input[type=text]:focus {
+    color: #000000;
+}
+
+.input-field label.active {
+    color: #2196f3 !important;
+}
+
+.input-field .prefix.active {
+    color: #2196f3;
+}
