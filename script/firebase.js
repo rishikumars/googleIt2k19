@@ -37,7 +37,7 @@ function writeUserData() {
     }
 
     if (getCookie("mobileNumber") === mobileNumber + "") {
-        window.open("./round_two.html", "_self");
+        window.open("./round_one.html", "_self");
     }
 
     document.cookie = "mobileNumber=" + mobileNumber;
@@ -48,6 +48,6 @@ function writeUserData() {
             user_name: userName,
             result: 10
         });
-        window.open("./round_two.html", "_self");
+        window.open("./round_one.html", "_self");
     }
 }
