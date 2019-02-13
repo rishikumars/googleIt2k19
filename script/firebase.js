@@ -43,7 +43,7 @@ function writeUserData() {
     document.cookie = "mobileNumber=" + mobileNumber;
     document.cookie = "userName=" + userName;
 
-    if (mobileNumber.length > 1 && userName.length > 1) {
+    if (mobileNumber.length == 10 && userName.length > 1) {
         firebase.database().ref('participants/' + mobileNumber + '/').set({
             user_name: userName,
             result: 10
